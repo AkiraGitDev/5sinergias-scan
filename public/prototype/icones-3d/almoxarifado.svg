@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+<defs>
+<radialGradient id="sh"><stop offset="0" stop-color="#000" stop-opacity=".6"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+<linearGradient id="t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF2FF"/><stop offset="1" stop-color="#C7D2FE"/></linearGradient>
+<linearGradient id="l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A5B4FC"/><stop offset="1" stop-color="#6366F1"/></linearGradient>
+<linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#3730A3"/></linearGradient>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E0E7FF" stop-opacity=".95"/><stop offset="1" stop-color="#A5B4FC" stop-opacity=".8"/></linearGradient>
+</defs>
+<ellipse cx="74" cy="140" rx="50" ry="9" fill="url(#sh)"/>
+<polygon points="72,62 110,81 72,100 34,81" fill="url(#t)"/>
+<polygon points="34,81 72,100 72,140 34,121" fill="url(#l)"/>
+<polygon points="72,100 110,81 110,121 72,140" fill="url(#r)"/>
+<polygon points="47,74.5 85,93.5 97,87.5 59,68.5" fill="#D9F77A"/>
+<polygon points="85,93.5 97,87.5 97,127.5 85,133.5" fill="#A3C934"/>
+<polyline points="34,81 72,100 110,81" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2"/>
+<line x1="72" y1="100" x2="72" y2="140" stroke="#fff" stroke-opacity=".35" stroke-width="1"/>
+<polygon points="62,46 82,56 62,66 42,56" fill="url(#g)"/>
+<polygon points="42,56 62,66 62,86 42,76" fill="#A5B4FC" fill-opacity=".9"/>
+<polygon points="62,66 82,56 82,76 62,86" fill="#818CF8" fill-opacity=".9"/>
+<polyline points="42,56 62,66 82,56" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1"/>
+<polygon points="42,100 58,108 58,116 42,108" fill="#fff" fill-opacity=".6"/>
+</svg>

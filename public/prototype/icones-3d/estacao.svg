@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+<defs>
+<radialGradient id="sh"><stop offset="0" stop-color="#000" stop-opacity=".6"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+<linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C7D2FE"/><stop offset="1" stop-color="#6366F1"/></linearGradient>
+<linearGradient id="sc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#818CF8"/><stop offset="1" stop-color="#312E81"/></linearGradient>
+<linearGradient id="m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1F3F9"/><stop offset="1" stop-color="#9CA3B8"/></linearGradient>
+</defs>
+<ellipse cx="80" cy="136" rx="52" ry="8" fill="url(#sh)"/>
+<rect x="34" y="38" width="100" height="68" rx="9" fill="#3730A3"/>
+<rect x="28" y="33" width="100" height="68" rx="9" fill="url(#b)"/>
+<rect x="34" y="39" width="88" height="56" rx="5" fill="url(#sc)"/>
+<rect x="42" y="48" width="34" height="5" rx="2.5" fill="#fff" fill-opacity=".85"/>
+<rect x="42" y="58" width="52" height="4" rx="2" fill="#fff" fill-opacity=".45"/>
+<rect x="42" y="66" width="44" height="4" rx="2" fill="#fff" fill-opacity=".45"/>
+<rect x="42" y="78" width="22" height="9" rx="4.5" fill="#D9F77A"/>
+<path d="M34 39 L70 39 L34 80 Z" fill="#fff" fill-opacity=".14"/>
+<rect x="70" y="101" width="16" height="20" fill="url(#m)"/>
+<ellipse cx="78" cy="123" rx="28" ry="7" fill="#9CA3B8"/>
+<ellipse cx="78" cy="121" rx="28" ry="7" fill="url(#m)"/>
+<circle cx="124" cy="36" r="15" fill="#A3C934"/>
+<circle cx="124" cy="34" r="15" fill="#D9F77A"/>
+<path d="M117 34 L122 39 L131 29" fill="none" stroke="#1E1B4B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
