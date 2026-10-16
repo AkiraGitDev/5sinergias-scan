@@ -10,9 +10,9 @@ Diagnóstico 5S instantâneo a partir de uma foto — avaliação por senso, ite
 [![Desafio](https://img.shields.io/badge/Desafio%2010-5Sinergias-00D9FF?style=for-the-badge)](https://eqtlab.com.br)
 [![Status](https://img.shields.io/badge/Status-MVP-FFC72C?style=for-the-badge)]()
 
-[**🎨 Figma clicável**](https://www.figma.com/design/E8WUQ3FR3GWlLqc8vc67Nn) · [**📸 Protótipo em Present mode**](https://www.figma.com/proto/E8WUQ3FR3GWlLqc8vc67Nn) · [**💻 Repositório**](https://github.com/AkiraGitDev/5sinergias-scan)
+[**🎨 Figma clicável**](https://www.figma.com/design/vt2CUzNGvIB2FKUFRx3nQP/Untitled--Copy-) · [**💻 Repositório**](https://github.com/AkiraGitDev/5sinergias-scan)
 
-<img src="docs/screens/06-resultado.png" width="320" alt="Resultado 5S com score 72/100" />
+<img src="docs/screens/05-diagnostico.png" width="320" alt="Diagnóstico 5S com score por senso e ações sugeridas" />
 
 </div>
 
@@ -56,41 +56,41 @@ A chamada ao modelo é feita no servidor (API route Next.js) com **fallback auto
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="docs/screens/01-splash.png" width="100%" alt="Splash" /><br />
-      <sub><b>01 — Splash</b></sub><br />
-      <sub>Entrada EQT Lab</sub>
+      <img src="docs/screens/01-login.png" width="100%" alt="Login" /><br />
+      <sub><b>01 — Login</b></sub><br />
+      <sub>Entrada 5Scan</sub>
     </td>
     <td align="center" width="33%">
       <img src="docs/screens/02-home.png" width="100%" alt="Home" /><br />
       <sub><b>02 — Home</b></sub><br />
-      <sub>Score semanal + ambientes</sub>
+      <sub>Score semanal + CTAs</sub>
     </td>
     <td align="center" width="33%">
-      <img src="docs/screens/04-card-ambiente.png" width="100%" alt="Card Ambiente" /><br />
-      <sub><b>04 — Card do Ambiente</b></sub><br />
-      <sub>Padrão esperado + histórico</sub>
+      <img src="docs/screens/03-ambientes.png" width="100%" alt="Ambientes" /><br />
+      <sub><b>03 — Ambientes</b></sub><br />
+      <sub>Lista com status 5S</sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
-      <img src="docs/screens/05-scan.png" width="100%" alt="Scan 5S" /><br />
-      <sub><b>05 — Scan 5S ★</b></sub><br />
+      <img src="docs/screens/04-scanner.png" width="100%" alt="Scanner" /><br />
+      <sub><b>04 — Scanner ★</b></sub><br />
       <sub>Câmera com grid guia</sub>
     </td>
     <td align="center" width="33%">
-      <img src="docs/screens/06-resultado.png" width="100%" alt="Resultado 5S" /><br />
-      <sub><b>06 — Resultado 5S ★</b></sub><br />
-      <sub>Score + ações IA</sub>
+      <img src="docs/screens/05-diagnostico.png" width="100%" alt="Diagnóstico 5S" /><br />
+      <sub><b>05 — Diagnóstico ★</b></sub><br />
+      <sub>Score por senso + ações IA</sub>
     </td>
     <td align="center" width="33%">
-      <img src="docs/screens/08-dashboard.png" width="100%" alt="Dashboard Liderança" /><br />
-      <sub><b>08 — Dashboard</b></sub><br />
-      <sub>Visão da liderança</sub>
+      <img src="docs/screens/06-dashboard.png" width="100%" alt="Dashboard Liderança" /><br />
+      <sub><b>06 — Dashboard</b></sub><br />
+      <sub>KPIs + ranking de ambientes</sub>
     </td>
   </tr>
 </table>
 
-> ★ Telas plugadas ao código real. As demais vivem no Figma clicável como roadmap do produto.
+> ★ Telas plugadas ao código real (Vercel). As demais vivem no Figma clicável.
 
 ## 🛠️ Stack
 
@@ -98,18 +98,18 @@ A chamada ao modelo é feita no servidor (API route Next.js) com **fallback auto
 |---|---|
 | **Frontend** | Next.js 16 (App Router) · React 19 · TypeScript · Tailwind 4 · Lucide React |
 | **IA** | Gemini 3.5 Flash Lite (com fallback para 3.1 / latest / 3.6 / 3.5) |
-| **Design** | Figma (protótipo com 8 telas e 16 reactions) |
+| **Design** | Figma (protótipo mobile com 10 telas e 32 reactions + Dashboard liderança) |
 | **Deploy** | Vercel |
-| **Fonte** | Inter |
+| **Fontes** | Onest (body) + Unbounded (display) |
 
-### Paleta EQT Lab
+### Design tokens
 
 ```
-#0A0A24  bg-primary        #7B4FFF  primary
-#15153A  bg-surface        #00D9FF  accent-cyan
-#1E1E52  bg-elevated       #00E096  success
-#2E2E6E  border-subtle     #FFC72C  warning
-#B8BAD4  text-secondary    #FF4757  danger
+#08071C  bg                 #4F46E5  primary (indigo)
+#121033  surface            #D9F77A  accent (lime)
+#EEF2FF  text               #FDBA8C  alert
+#A3A8CF  text-muted         #4ADE80  success
+#8E93BF  text-dim           rgba(165,180,252,.18)  border
 ```
 
 ## 🚀 Rodando local
@@ -135,8 +135,8 @@ Abra http://localhost:3000 no celular (via mesma rede) ou no desktop e selecione
 5sinergias-scan/
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx          # Inter + metadata + viewport mobile
-│   │   ├── globals.css         # Tokens de cor EQT Lab via @theme
+│   │   ├── layout.tsx          # Onest + Unbounded + metadata + viewport mobile
+│   │   ├── globals.css         # Design tokens via @theme (dark + indigo/lime)
 │   │   ├── page.tsx            # Client flow: idle → preview → analyzing → result
 │   │   └── api/scan/route.ts   # POST /api/scan (FormData → Gemini → JSON)
 │   └── lib/
@@ -151,14 +151,17 @@ Abra http://localhost:3000 no celular (via mesma rede) ou no desktop e selecione
 **Dentro de escopo:**
 - ✅ Captura de foto (câmera do dispositivo) + preview + análise
 - ✅ Diagnóstico 5S completo com IA, retornando JSON estruturado
-- ✅ UI mobile-first em pt-BR
+- ✅ UI mobile-first em pt-BR com dark theme + Onest/Unbounded
 - ✅ Fallback automático de modelo para zero downtime
+- ✅ Protótipo clicável no Figma (10 telas, 32 reactions, Smart Animate 300ms)
+- ✅ Dashboard de liderança (mobile) com KPIs, chart semanal e ranking de ambientes
+- ✅ Fluxo integrado protótipo ↔ Vercel (botão "Analisar com IA" abre tela real; botão "← Voltar ao protótipo" retorna via history)
 
 **Fora de escopo (vive no Figma como roadmap):**
 - 🔮 Autenticação corporativa (SSO Azure AD)
 - 🔮 QR Code físico por ambiente para contextualização automática
 - 🔮 Trilha gamificada completa (jornada de 5 semanas, 1 senso/semana)
-- 🔮 Dashboard de liderança com métricas agregadas
+- 🔮 Persistência de histórico e sincronização entre dispositivos
 - 🔮 Integração com Viva Engage / Fique por Dentro / TVs corporativas
 - 🔮 Comparação antes/depois com geração de imagem ideal
 
