@@ -1,31 +1,47 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg-primary: #0A0A24;
-  --color-bg-surface: #15153A;
-  --color-bg-elevated: #1E1E52;
-  --color-bg-card: #262668;
-  --color-primary: #7B4FFF;
-  --color-primary-hover: #9A6FFF;
-  --color-primary-dark: #5B2FDF;
-  --color-accent-cyan: #00D9FF;
-  --color-accent-pink: #FF4FD8;
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #B8BAD4;
-  --color-text-muted: #7A7C9E;
-  --color-border-subtle: #2E2E6E;
-  --color-success: #00E096;
-  --color-warning: #FFC72C;
-  --color-danger: #FF4757;
+  --color-bg-primary: #08071C;
+  --color-bg-surface: #121033;
+  --color-bg-elevated: #1B1846;
+  --color-bg-card: #241F55;
+  --color-primary: #4F46E5;
+  --color-primary-hover: #6366F1;
+  --color-primary-dark: #4338CA;
+  --color-accent-lime: #D9F77A;
+  --color-accent-lime-soft: #E5FA9A;
+  --color-text-primary: #EEF2FF;
+  --color-text-secondary: #A3A8CF;
+  --color-text-muted: #8E93BF;
+  --color-border-subtle: rgba(165, 180, 252, 0.18);
+  --color-border-strong: rgba(165, 180, 252, 0.32);
+  --color-success: #4ADE80;
+  --color-warning: #FDBA8C;
+  --color-danger: #F87171;
+
+  --font-sans: var(--font-onest), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-unbounded), var(--font-onest), system-ui, sans-serif;
 }
 
 html, body {
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-onest), system-ui, -apple-system, sans-serif;
   min-height: 100vh;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-unbounded), var(--font-onest), system-ui, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* ambient glow usada em backgrounds de hero/CTA */
+.ambient-indigo {
+  background: radial-gradient(circle at 50% 0%,
+    rgba(79, 70, 229, 0.35) 0%,
+    rgba(79, 70, 229, 0) 60%);
 }

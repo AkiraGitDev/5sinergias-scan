@@ -109,7 +109,16 @@ export default function Page() {
       </div>
 
       <div className="relative w-full max-w-md min-h-screen flex flex-col">
-        <header className="pt-14 pb-6 px-5 flex items-center gap-3">
+        <button
+          onClick={() => window.history.back()}
+          className="self-start flex items-center gap-1.5 px-5 pt-5 text-[11px] font-semibold uppercase tracking-widest text-text-muted hover:text-accent-lime transition"
+          aria-label="Voltar ao protótipo"
+        >
+          <ChevronLeft size={14} />
+          <span>Voltar ao protótipo</span>
+        </button>
+
+        <header className="pt-4 pb-6 px-5 flex items-center gap-3">
           {phase !== "idle" && phase !== "analyzing" && (
             <button
               onClick={resetAll}
@@ -209,7 +218,7 @@ function IdleView({
               onClick={() => onAmbienteChange(key)}
               className={`p-4 rounded-2xl border text-left transition ${
                 active
-                  ? "bg-primary border-primary shadow-[0_8px_24px_rgba(123,79,255,0.4)]"
+                  ? "bg-primary border-primary shadow-[0_8px_24px_rgba(79,70,229,0.45)]"
                   : "bg-bg-surface border-border-subtle hover:border-primary/60"
               }`}
             >
@@ -230,7 +239,7 @@ function IdleView({
       <div className="mt-auto flex flex-col gap-3">
         <button
           onClick={onOpenPicker}
-          className="w-full py-4 rounded-2xl bg-primary hover:bg-primary-hover text-white font-semibold text-base shadow-[0_8px_32px_rgba(123,79,255,0.5)] flex items-center justify-center gap-3 transition"
+          className="w-full py-4 rounded-2xl bg-primary hover:bg-primary-hover text-white font-semibold text-base shadow-[0_8px_32px_rgba(79,70,229,0.5)] flex items-center justify-center gap-3 transition"
         >
           <Camera size={20} />
           Tirar foto do ambiente
@@ -276,7 +285,7 @@ function PreviewView({
       <div className="rounded-xl bg-bg-surface border border-border-subtle p-4 flex gap-3">
         <Sparkles
           size={18}
-          className="text-accent-cyan flex-shrink-0 mt-0.5"
+          className="text-accent-lime flex-shrink-0 mt-0.5"
         />
         <div className="text-xs text-text-secondary leading-relaxed">
           A IA vai avaliar os 5 sensos, identificar itens fora do padrão e
@@ -287,7 +296,7 @@ function PreviewView({
       <div className="mt-auto flex flex-col gap-3">
         <button
           onClick={onAnalyze}
-          className="w-full py-4 rounded-2xl bg-primary hover:bg-primary-hover text-white font-semibold text-base shadow-[0_8px_32px_rgba(123,79,255,0.5)] flex items-center justify-center gap-2 transition"
+          className="w-full py-4 rounded-2xl bg-primary hover:bg-primary-hover text-white font-semibold text-base shadow-[0_8px_32px_rgba(79,70,229,0.5)] flex items-center justify-center gap-2 transition"
         >
           <Sparkles size={18} />
           Analisar com IA
@@ -313,7 +322,7 @@ function AnalyzingView({
     <div className="flex-1 flex flex-col items-center justify-center px-5 pb-10 gap-8">
       <div className="relative">
         <div className="absolute inset-0 rounded-full bg-primary/40 blur-2xl animate-pulse" />
-        <div className="relative w-28 h-28 rounded-full bg-primary flex items-center justify-center shadow-[0_8px_48px_rgba(123,79,255,0.6)]">
+        <div className="relative w-28 h-28 rounded-full bg-primary flex items-center justify-center shadow-[0_8px_48px_rgba(79,70,229,0.6)]">
           <Loader2 className="animate-spin" size={44} />
         </div>
       </div>
@@ -337,7 +346,7 @@ function AnalyzingView({
               className="flex items-center gap-3 text-xs text-text-secondary"
             >
               <div
-                className="w-2 h-2 rounded-full bg-accent-cyan animate-pulse"
+                className="w-2 h-2 rounded-full bg-accent-lime animate-pulse"
                 style={{ animationDelay: `${i * 300}ms` }}
               />
               {t}
@@ -372,7 +381,7 @@ function ResultView({
 
   return (
     <div className="flex-1 flex flex-col px-5 pb-10 gap-5">
-      <div className="relative overflow-hidden rounded-3xl bg-primary p-6 shadow-[0_12px_48px_rgba(123,79,255,0.5)]">
+      <div className="relative overflow-hidden rounded-3xl bg-primary p-6 shadow-[0_12px_48px_rgba(79,70,229,0.5)]">
         <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/10 blur-2xl" />
         <p className="text-[11px] font-semibold tracking-widest text-white/75 uppercase relative">
           Score 5S · {ambienteLabel}
@@ -457,7 +466,7 @@ function ResultView({
 
       <section>
         <h3 className="text-sm font-semibold mb-3 px-1 flex items-center gap-2">
-          <Sparkles size={14} className="text-accent-cyan" />
+          <Sparkles size={14} className="text-accent-lime" />
           Ações sugeridas pela IA
         </h3>
         <div className="space-y-2">
@@ -468,7 +477,7 @@ function ResultView({
             >
               <div className="flex items-start justify-between gap-2 mb-1">
                 <div className="text-sm font-semibold">{a.titulo}</div>
-                <span className="flex-shrink-0 px-2 py-0.5 rounded-full bg-accent-cyan text-bg-primary text-[10px] font-bold flex items-center gap-1">
+                <span className="flex-shrink-0 px-2 py-0.5 rounded-full bg-accent-lime text-bg-primary text-[10px] font-bold flex items-center gap-1">
                   <Clock size={10} />
                   {a.tempoEstimadoMin}min
                 </span>
@@ -484,13 +493,13 @@ function ResultView({
         </div>
       </section>
 
-      <div className="rounded-xl bg-bg-elevated border border-warning p-4 flex items-center gap-3">
-        <div className="w-10 h-10 rounded-xl bg-warning flex items-center justify-center text-xl flex-shrink-0">
+      <div className="rounded-xl bg-accent-lime/10 border border-accent-lime/40 p-4 flex items-center gap-3">
+        <div className="w-10 h-10 rounded-xl bg-accent-lime flex items-center justify-center text-xl flex-shrink-0">
           🏆
         </div>
         <div className="flex-1 min-w-0">
-          <div className="text-[11px] font-semibold text-warning">
-            Nova conquista!
+          <div className="text-[10px] font-semibold text-accent-lime uppercase tracking-widest">
+            Nova conquista
           </div>
           <div className="text-sm font-bold">Olho de Águia · +30 pts</div>
         </div>
@@ -511,7 +520,7 @@ function ResultView({
 
       <button
         onClick={onNewScan}
-        className="w-full py-4 rounded-2xl bg-primary hover:bg-primary-hover text-white font-semibold flex items-center justify-center gap-2 shadow-[0_8px_32px_rgba(123,79,255,0.5)] transition"
+        className="w-full py-4 rounded-2xl bg-primary hover:bg-primary-hover text-white font-semibold flex items-center justify-center gap-2 shadow-[0_8px_32px_rgba(79,70,229,0.5)] transition"
       >
         <Camera size={18} />
         Fazer novo scan
